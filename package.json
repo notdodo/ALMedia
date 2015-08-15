@@ -1,0 +1,13 @@
+{
+  "title": "ALMedia",
+  "name": "almedia",
+  "version": "0.0.1",
+  "description": "A basic add-on",
+  "main": "index.js",
+  "author": "Edoardo Rosa, Lisa Mazzini",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "GPL"
+}
