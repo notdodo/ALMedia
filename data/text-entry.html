@@ -9,8 +9,8 @@
     <p> Base di Laurea:</p><span id="mark"></span>
     <script>
     addon.on('message', data => {
-        document.getElementById("average").innerHTML = data[0];
-        document.getElementById("mark").innerHTML = data[1];
+        document.getElementById("average").textContent = data[0];
+        document.getElementById("mark").textContent = data[1];
     });
     </script>
 </body>
