@@ -1,2 +1,2 @@
-# AlMedia
+# ALMedia
 Firefox Add-on extension
