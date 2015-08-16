@@ -1,13 +1,17 @@
 <html>
 <head>
-    <style type="text/css" media="all">
-      body {
-        background-color: white;
-      }
-    </style>
-  </head>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
-  <p> Media Pesata: <span id="average"></span></p>
-  <p> Base di Laurea: <span id="mark"></span></p>
-  </body>
+    <h1>ALMedia</h1>
+    <p> Media Pesata:</p><span id="average"></span>
+    <p> Base di Laurea:</p><span id="mark"></span>
+    <script>
+    addon.on('message', data => {
+        document.getElementById("average").innerHTML = data[0];
+        document.getElementById("mark").innerHTML = data[1];
+    });
+    </script>
+</body>
 </html>

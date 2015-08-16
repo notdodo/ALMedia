@@ -1,10 +1,6 @@
-
-var tableName = 'iceDataTblOutline';
-var table = document.getElementsByClassName(tableName)[0];
-var markOffset = 5;
-var cfuOffset = 4;
-var totalMarks = totalCFU = numMarks = average = 0;
-var finalMark = 0;
+var tableName = 'iceDataTblOutline', table = document.getElementsByClassName(tableName)[0];
+var markOffset = 5, cfuOffset = 4;
+var totalMarks = totalCFU = numMarks = average = finalMark = 0;
 
 var marks = table.getElementsByTagName('tr');
 for (var index = 1; index < marks.length; ++index) {
@@ -17,15 +13,12 @@ for (var index = 1; index < marks.length; ++index) {
   }
 }
 
-average = totalMarks / totalCFU;
-finalMark = average * 110 / 30;
-//document.getElementById("average").innerHTML = average;
-//document.getElementById("mark").innerHTML = finalMark;
-//console.log(average);
-//console.log(finalMark);
+average = (totalMarks / totalCFU).toFixed(2);
+finalMark = (average * 110 / 30).toFixed(2);
 
-self.port.on('getElem', function(data) {
-	console.log("received: ", data);
-	self.port.emit("retElem", average);
-	self.port.emit("retElem", finalMark);
+self.port.on("qu]*Bvu0tYkP@A~E5qfR7b}58SB=T~QDKDEhtw[8", data => {
+    if (data === "getElem") {
+        var ret = [average, finalMark];
+        self.port.emit("retElem", ret);
+    }
 });
