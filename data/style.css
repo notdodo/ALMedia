@@ -1,0 +1,27 @@
+* {
+    font-family: "Droid Sans", sans-serif;
+}
+
+body {
+    background-color: #E4F1FE;
+}
+
+h1 {
+    text-align: center;
+    color: #2574A9;
+    font-size: 1.6em;
+}
+
+p {
+    color: #34495E;
+    font-size: 1.2em;
+    margin: 0px;
+    margin-bottom: 0.3em;
+}
+
+span {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    font-weight: bolder;
+}
