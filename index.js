@@ -25,7 +25,7 @@ function startConn(worker) {
 // into it.
 var text_entry = require("sdk/panel").Panel({
     width: 180,
-    height: 180,
+    height: 150,
     contentURL: data.url("text-entry.html")
 });
 
