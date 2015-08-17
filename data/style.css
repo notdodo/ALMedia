@@ -10,16 +10,16 @@ body {
     margin: 0;
     padding: 0;
     height: 146px;
-    background-color: #E4F1FE;
+    background-color: #E8E8E8;
     border: 7px solid white;
 }
 
 h1 {
     text-align: left;
     padding-left: 25px;
-    color: #E4F1FE;
+    color: #FFFFFF;
     font-size: 1.6em;
-    background-color: #2C3E50;
+    background-color: #4949E2;
     margin-right: 50px;
     margin-left: -11px;
     margin-top: 5px;
@@ -33,20 +33,20 @@ h3 {
 }
 
 p {
-    color: #34495E;
+    color: #000000;
     font-size: 1.2em;
     margin-bottom: 0.1em;
     margin-left: 10px;
-    text-decoration: underline;
 }
 
 span {
     margin: 0;
     padding: 0;
-    font-size: 1.4em;
+    font-size: 1.8em;
     font-weight: bolder;
     text-decoration: none;
-    margin-left: 10px;
+    margin-left: 55px;
+    
 }
 
 #main {
