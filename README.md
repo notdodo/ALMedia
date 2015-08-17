@@ -1,7 +1,7 @@
 # ALMedia
 This Firefox extension is made for students of University of Bologna, it can be used on the [AlmaEsami](almaesami.unibo.it) webpage (where all the exams are registered) in order to know their GPA (grade point average), both out of 30 and out of 110.
 
-## Download here: 
+## Download 
 https://addons.mozilla.org/it/firefox/addon/almedia/
 
 ### Information:
