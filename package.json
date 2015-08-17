@@ -6,8 +6,7 @@
   "main": "index.js",
   "author": "Edoardo Rosa, Lisa Mazzini",
   "engines": {
-    "firefox": ">=38.0a1",
-    "fennec": ">=38.0a1"
-  },
+    "Firefox": ">=33.0"
+    },
   "license": "GPL"
 }
