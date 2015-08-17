@@ -19,13 +19,9 @@ function startConn(worker) {
     });
 }
 
-
-// Construct a panel, loading its content from the "text-entry.html"
-// file in the "data" directory, and loading the "get-text.js" script
-// into it.
 var text_entry = require("sdk/panel").Panel({
     width: 180,
-    height: 150,
+    height: 160,
     contentURL: data.url("text-entry.html")
 });
 
