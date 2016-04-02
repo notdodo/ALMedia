@@ -2,10 +2,6 @@
     font-family: "Droid Sans", sans-serif;
 }
 
-a {
-    text-decoration: none;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -48,12 +44,15 @@ span {
     margin-left: 55px;
 }
 
-a {
-    
-}
-
 #main {
     display: none;
+}
+
+#notset a {
+	font-size: 1em;
+	font-weight: bolder;
+	text-decoration: none;
+	color: red;
 }
 
 @media
@@ -61,19 +60,19 @@ a {
     /* Retina-specific stuff here */
 
     p {
-    color: #000000;
-    font-size: 1.2em;
-    margin: 0;
-    margin-left: 10px;
-    margin-top: 10px;
-}
+		color: #000000;
+		font-size: 1.2em;
+		margin: 0;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
     span {
-    margin: 0;
-    padding: 0;
-    font-size: 1.8em;
-    font-weight: bolder;
-    text-decoration: none;
-    margin-left: 55px;
-}
-
+		margin: 0;
+		padding: 0;
+		font-size: 1.8em;
+		font-weight: bolder;
+		text-decoration: none;
+		margin-left: 55px;
+	}
+	
 }

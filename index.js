@@ -7,8 +7,8 @@ var setElem = [];
 
 pageMod.PageMod({
     include: "https://almaesami.unibo.it/almaesami/studenti/*",
-    contentScriptWhen: 'end',
-    contentScriptFile: data.url("get-text.js"),
+	contentScriptWhen: 'end',
+    contentScriptFile: self.data.url("get-text.js"),
     onAttach: startConn
 });
 
@@ -24,6 +24,8 @@ var text_entry = require("sdk/panel").Panel({
     height: 160,
     contentURL: data.url("text-entry.html")
 });
+
+text_entry.port.on("openALMA", uri => require("sdk/tabs").open(uri));
 
 var button = buttons.ActionButton({
     id: "almedia",

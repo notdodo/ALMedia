@@ -10,9 +10,20 @@
         <p> Base di Laurea:</p><span id="mark"></span>
     </div>
     <div id="notset">
-        <h3>Visita la pagina del tuo libretto online per permettere ad <b>ALMedia</b> di calcolare la tua media.</h3>
-    </div>
+        <h3>Visita la 
+		<a href="https://almaesami.unibo.it/almaesami/studenti/attivitaFormativaPiano-list.htm" target="_blank">
+			pagina
+		</a> 
+		del tuo libretto online per permettere ad <b>ALMedia</b> di calcolare la tua media.</h3>
+	</div>
     <script>
+	document.addEventListener("click", event => { 
+		let a = event.target.closes("a");
+		if (a && a.href) {
+			addon.port.emit("openALMA", a.href);
+		}
+		event.preventDefault();
+	});
     addon.on('message', data => {
         document.getElementById("main").style.display = "block";
         document.getElementById("notset").style.display = "none";
