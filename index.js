@@ -26,8 +26,8 @@ var text_entry = require("sdk/panel").Panel({
 });
 
 var button = buttons.ActionButton({
-    id: "show-panel",
-    label: "Show Panel",
+    id: "almedia",
+    label: "ALMedia",
     icon: {
         "16": "./327.png",
         "32": "./327.png",

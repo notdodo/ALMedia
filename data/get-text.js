@@ -5,12 +5,14 @@ var totalMarks = totalCFU = numMarks = average = finalMark = 0;
 var marks = table.getElementsByTagName('tr');
 for (var index = 1; index < marks.length; ++index) {
   var voto = marks[index].getElementsByTagName('td') [markOffset].innerHTML;
-  var value = parseInt(voto.replace(/[^\d\.\-]/g, ''));
-  if (value > 0) {
-    var cfu = parseInt(marks[index].getElementsByTagName('td') [cfuOffset].innerHTML);
-    totalMarks += value * cfu;
-    totalCFU += cfu;
-  }
+  if(voto.indexOf("verbalizzato:") > -1 && /\d/.test(voto)){
+	  var value = parseInt(voto.replace(/[^\d\.\-]/g, ''));
+	  if (value > 0) {
+	    var cfu = parseInt(marks[index].getElementsByTagName('td') [cfuOffset].innerHTML);
+	    totalMarks += value * cfu;
+	    totalCFU += cfu;
+	  }
+	}
 }
 
 average = (totalMarks / totalCFU).toFixed(2);
