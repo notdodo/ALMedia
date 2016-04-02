@@ -7,3 +7,4 @@
 
 # test, npm modules
 test/*
+node_modules
