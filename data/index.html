@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="styleDark.css">
+    <script type="text/javascript" src="UIscripts.js"></script>
+</head>
+<body>
+	<header id="header" class="">
+    	<h4>ALMedia <i class="fa fa-graduation-cap" aria-hidden="true" style="padding:0;"></i></h4>
+    	<div class="right-arrow"></div>
+	</header>
+    <div class="main">
+    	<div class="results">
+    		<div class="avg">
+    			<p><b>Media:</b></p>
+    			<input type="number" id="avgResult" class="clean" disabled=true readonly="readonly" placeholder="---" autofocus=true/>
+    		</div>
+    		<div class="finalMark">
+    			<p><b>Laurea:</b></p>
+    			<input type="number" id="markResult" class="clean" disabled=true readonly="readonly" placeholder="---" />
+    		</div>
+    	</div>
+    	<div class="historyMarks"></div>
+		<div class="futureMarks">
+			<div>
+				<input type="number" id="newMark" name="newMark" min=18 max=30 autofocus placeholder="Voto">
+				<input type="number" id="newCfu" name="newCfu" min=1 max=24 placeholder="Peso">
+			</div>
+			<button id="addExam" onclick='addNewExam();'><i class="fa fa-plus" aria-hidden="true"></i></button>
+		</div>
+		<div class="note">
+			<i class="fa fa-info-circle" aria-hidden="true"></i><br/>
+			<p class="info"></p>
+		</div>
+    </div>
+</body>
+</html>

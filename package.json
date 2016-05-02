@@ -1,12 +1,19 @@
 {
-  "title": "ALMedia",
-  "name": "almedia",
-  "version": "1.0.0",
-  "description": "Calcola la tua media del libretto e la tua base di laurea direttamente dal portale di AlmaEsami.",
-  "main": "index.js",
-  "author": "Edoardo Rosa, Lisa Mazzini",
-  "engines": {
-    "Firefox": ">=33.0"
-    },
-  "license": "GPL"
+	"title": "ALMedia",
+	"name": "almedia",
+	"version": "2.0.0",
+	"description": "Calcola la tua media del libretto e la tua base di laurea direttamente dal portale di AlmaEsami.",
+	"main": "index.js",
+	"author": "Edoardo Rosa, Lisa Mazzini",
+	"engines": {
+		"Firefox": ">=33.0"
+	},
+	"license": "GPL",
+	"preferences": [{
+		"name": "DarkTheme",
+		"title": "Dark Theme",
+		"description": "Set the dark theme for the extension",
+		"type": "bool",
+		"value": true
+	}]
 }
