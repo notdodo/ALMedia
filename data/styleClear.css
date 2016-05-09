@@ -29,6 +29,7 @@ p {
 }
 
 input[type="number"] {
+	color: #424f5a;
 	display: block;
 	margin:  0;
 	padding: 4px;
