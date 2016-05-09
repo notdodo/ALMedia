@@ -1,43 +1,38 @@
-class ALMedia {
-	constructor() {
-		this._tableName = 'iceDataTblOutline';
-		this._table = document.getElementsByClassName(this._tableName)[0];
-		this._markOffset = 5;
-		this._cfuOffset = 4;
-		this._totalMarks = 0;
-		this._totalCFU = 0;
-		this._numMarks = 0;
-		this._average = 0;
-		this._finalMark = 0;
-		this._tableMarks = this._table.getElementsByTagName('tr');
-	}
-	
-	_sendResults() {
-		this._average = (this._totalMarks / this._totalCFU).toFixed(2);
-		this._finalMark = (this._average * 110 / 30).toFixed(2);
-		var _ret = [this._average, this._finalMark, this._totalMarks, this._totalCFU];
-		self.port.emit('retElem', _ret);
-	}
-	
-	parseExams() {
-		for (var _index = 1; _index < this._tableMarks.length; ++_index) {
-			var _voto = this._tableMarks[_index].getElementsByTagName('td')[this._markOffset].innerHTML;
-			if (_voto.includes('verbalizzato') && /\d/.test(_voto)) {
-				var _value = parseInt(_voto.replace(/[^\d\.\-]/g, ''));
-				if (_value > 0) {
-					var _cfu = parseInt(this._tableMarks[_index].getElementsByTagName('td')[this._cfuOffset].innerHTML);
-					this._totalMarks += _value * _cfu;
-					this._totalCFU += _cfu;
-				}
-			}
-		}
-		this._sendResults();
-	}
+var tableName = 'iceDataTblOutline',
+	table = document.getElementsByClassName(tableName)[0],
+	markOffset = 5,
+	cfuOffset = 4,
+	totalMarks = 0,
+	totalCFU = 0,
+	numMarks = 0,
+	average = 0,
+	finalMark = 0,
+	tableMarks = table.getElementsByTagName('tr');
+
+function sendResults() {
+	average = (totalMarks / totalCFU).toFixed(2);
+	finalMark = (average * 110 / 30).toFixed(2);
+	var ret = [average, finalMark, totalMarks, totalCFU];
+	self.port.emit('retElem', ret);
 }
 
-let parse = new ALMedia();
+function parseExams() {
+	for (var index = 1; index < tableMarks.length; ++index) {
+		var voto = tableMarks[index].getElementsByTagName('td')[markOffset].innerHTML;
+		if (voto.includes('verbalizzato') && /\d/.test(voto)) {
+			var value = parseInt(voto.replace(/[^\d\.\-]/g, ''));
+			if (value > 0) {
+				var cfu = parseInt(tableMarks[index].getElementsByTagName('td')[cfuOffset].innerHTML);
+				totalMarks += value * cfu;
+				totalCFU += cfu;
+			}
+		}
+	}
+	sendResults();
+}
+
 self.port.on('parseALMA', data => {
 	if (data === 'getElem') {
-		parse.parseExams();
+		parseExams();
 	}
 });
