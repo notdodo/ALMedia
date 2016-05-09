@@ -1,6 +1,6 @@
 body {
 	font-family: "Roboto Slab", sans-serif;
-	background-color: #34495e;
+	background-color: #F2F2F2;
 	overflow: hidden;
 }
 
@@ -13,7 +13,7 @@ a {
 h4 {
 	float: left;
 	background-color: #e74c3c;
-	padding: 10px 40px;
+	padding: 11px 40px;
 	color: #ecf0f1;
 	font-weight: bold;
 	margin: 0;
@@ -22,7 +22,7 @@ h4 {
 }
 
 p {
-	color: #ecf0f1;
+	color: #424f5a;
 	margin: 0;
 	padding: 0;
 	font-size: 1.1em;
@@ -34,7 +34,7 @@ input[type="number"] {
 	padding: 4px;
 	box-shadow: none;
 	border-radius: 6px;
-	background-color: #3B526A;
+	background-color: #FFFFFF;
 	border: 0;
 	font-size: 1em;
 	font-weight: normal;
@@ -62,9 +62,9 @@ header {
 .right-arrow {
 	float: left;
 	background-color: #e74c3c;
-	border-top: 20px solid #34495e;
+	border-top: 20px solid #F2F2F2;
 	border-left: 20px solid #e74c3c;
-	border-bottom: 20px solid #34495e;
+	border-bottom: 20px solid #F2F2F2;
 }
 
 .main {
@@ -113,7 +113,7 @@ header {
 }
 
 .main .futureMarks button:hover, .main .historyMarks .examRow button:hover {
-	background-color: #ffffff;
+	background-color: #F2F2F2;
 	color: #1ABC9C;
 	border: 1px solid #1ABC9C;
 }
@@ -128,12 +128,12 @@ header {
 	margin-top: 15px;
 	width: 201px;
 	height: 80px;
-	border: 1px solid #ECF0F1;
+	border: 1px solid #424f5a;
 	border-radius: 6px;
 }
 
 .main .note i {
-	color: white;
+	color: #424f5a;
 	margin-top: 5px;
 	margin-left: 5px;
 }

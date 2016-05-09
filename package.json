@@ -14,6 +14,6 @@
 		"title": "Dark Theme",
 		"description": "Set the dark theme for the extension",
 		"type": "bool",
-		"value": true
+		"value": false
 	}]
 }
