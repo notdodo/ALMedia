@@ -6,9 +6,9 @@ Select Dark Theme or Clear theme from the extension preferences:
 
 <img src="https://blog.swisscows.ch/wp-content/uploads/2016/04/hamburger-icon.jpg" alt="Preferences" height="20"/> &rarr; Add-ons &rarr; Extensions &rarr; ALMedia &rarr; Preferences
 
-<img style="float: left;" src="https://addons.cdn.mozilla.net/user-media/previews/full/173/173984.png?modified=1462870353"/>
-<img style="float: left;" src="https://addons.cdn.mozilla.net/user-media/previews/full/173/173985.png?modified=1462870353"/>
-<img style="float: right;" src="https://addons.cdn.mozilla.net/user-media/previews/full/173/173986.png?modified=1462870353"/>
+<img width="250" style="float: left;" src="https://addons.cdn.mozilla.net/user-media/previews/full/173/173984.png?modified=1462870353"/>
+<img width="250" style="float: left;" src="https://addons.cdn.mozilla.net/user-media/previews/full/173/173985.png?modified=1462870353"/>
+<img width="250" style="float: right;" src="https://addons.cdn.mozilla.net/user-media/previews/full/173/173986.png?modified=1462870353"/>
 
 ## Download 
 https://addons.mozilla.org/it/firefox/addon/almedia/
