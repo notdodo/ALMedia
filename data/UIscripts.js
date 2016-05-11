@@ -38,8 +38,8 @@ addon.on('message', data => {
 		break;
 		case 'loadTheme':
 			randomQuote();
-			if (!msg.data && document.styleSheets[4].href.includes('styleDark.css'))
-				document.querySelector("link[href='styleDark.css']").href = 'styleClear.css';
+			if (msg.data && document.styleSheets[4].href.includes('styleClear.css'))
+				document.querySelector("link[href='styleClear.css']").href = 'styleDark.css';
 		break;
 		case 'numExams':
 			numExams = msg.data;
@@ -55,7 +55,7 @@ function changeTheme(isDark) {
 }
 
 function addNewExam() {
-	var mark = document.getElementById('newMark'); 
+	var mark = document.getElementById('newMark');
 	var cfu = document.getElementById('newCfu');
 	if (parseInt(mark.value) >= 18 && parseInt(cfu.value) >= 1 && numExams <= maxExams) {
 		submitNewExam(mark.value, cfu.value);
