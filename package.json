@@ -1,0 +1,27 @@
+{
+    "name": "ALMedia",
+    "version": "3.0.0",
+    "description": "Calcola la tua media del libretto e la tua base di laurea direttamente dal portale di AlmaEsami.",
+    "main": "popup.html",
+    "dependencies": {
+        "web-ext": "^1.9.1"
+    },
+    "devDependencies": {},
+    "keywords": [
+        "almedia",
+        "unibo",
+        "media",
+        "esami",
+        "università"
+    ],
+    "author": "Edoardo Rosa",
+    "homepage": "https://addons.mozilla.org/it/firefox/addon/almedia/",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/edoz90/ALMedia"
+    },
+    "bugs": {
+        "url": "https://github.com/edoz90/ALMedia/issues"
+    },
+    "license": "GPL-3.0"
+}

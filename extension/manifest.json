@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+
+    "name": "ALMedia",
+    "version": "3.0.0",
+    "description": "Calcola la tua media del libretto e la tua base di laurea direttamente dal portale di AlmaEsami.",
+    "author": "Edoardo Rosa, Lisa Mazzini",
+
+    "permissions": [
+        "https://almaesami.unibo.it/almaesami/studenti/*",
+        "storage"
+    ],
+
+    "browser_action": {
+        "browser_style": true,
+        "default_title": "View the Links in this Page",
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/16.png",
+            "32": "images/32.png",
+            "64": "images/64.png"
+        }
+    },
+
+    "content_security_policy": "script-src 'self' https://maxcdn.bootstrapcdn.com/* https://fonts.googleapis.com/*; object-src 'self'",
+
+    "options_ui": {
+        "page": "prefs/preferences.html"
+    }
+}
