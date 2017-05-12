@@ -8,3 +8,4 @@
 # test, npm modules
 test/*
 node_modules
+.web-extension-id
