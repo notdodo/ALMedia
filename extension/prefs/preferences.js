@@ -13,12 +13,8 @@ function restoreOptions() {
         }
     }
 
-    function onError(error) {
-        console.log(`Error: ${error}`);
-    }
-
     var getting = browser.storage.local.get("theme");
-    getting.then(setCurrentChoice, onError);
+    getting.then(setCurrentChoice, null);
 }
 
 document.addEventListener('DOMContentLoaded', restoreOptions);

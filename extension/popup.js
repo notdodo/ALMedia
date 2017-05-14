@@ -7,23 +7,25 @@ var examID =     0,
     finalMark =  0,
     examID =     0;
 
+// href to set
 var urlAlma = "https://almaesami.unibo.it/almaesami/studenti/attivitaFormativaPiano-list.htm"
-var wrongPage = 'Apri la <a href="' + urlAlma + '" target="_blank">pagina</a> del tuo libretto per conoscere la tua media e il voto di laurea di partenza!';
-var infoGit = 'ALMedia è Open Source: guarda il <a href="https://github.com/edoz90/ALMedia" target="_blank">codice sorgente</a> su GitHub.';
-var tip0 = 'Lo sai che puoi cambiare il tema dalle preferenze dell\'estensione?';
-var tip1 = 'Le lodi non sono considerate ai fini della media e del voto di laurea.';
-var infoDev = 'Vieni a conoscere chi c\'è dietro ALMedia: <a href="https://addons.mozilla.org/en-GB/firefox/addon/almedia/developers" target="_blank">Edoardo Rosa</a> e <a href="https://addons.mozilla.org/en-GB/firefox/addon/almedia/developers" target="_blank">Lisa Mazzini</a>';
+var urlGithub = "https://github.com/edoz90/ALMedia";
+var urlAddon = "https://addons.mozilla.org/en-GB/firefox/addon/almedia/developers";
+
+// quotes: [before, after, a.text, a.her, a.target]
+var wrongPage = ['Apri la ', ' del tuo libretto per conoscere la tua media e il voto di laurea di partenza!', 'pagina', urlAlma, '_blank'];
+var infoGit = ['ALMedia è Open Source: guarda il ', ' su GitHub', 'codice sorgente', urlGithub, '_blank'];
+var tip0 = ['Lo sai che puoi cambiare il tema dalle preferenze dell\'estensione?'];
+var tip1 = ['Le lodi non sono considerate ai fini della media e del voto di laurea.'];
+var infoDev = ['Vieni a conoscere ' , ' c\'è dietro ALMedia', 'chi', urlAddon, '_blank'];
 var quotes = [infoGit, infoDev, tip0, tip1];
 
-
+// listners for click on a.href and addNewExam
 document.addEventListener('DOMContentLoaded', () => {
     /* Open link to Almaesami */
     document.addEventListener('click', event => {
         let a = event.target.closest('a');
-        // typeof null -> 'object' WTF!
-        // a = 0 if (a) -> undefined WTF!
-        // a = false if (a) -> undefined WTF!
-        if (a !== null && typeof a !== 'undefined' && typeof a.href !== 'undefined') {
+        if (a !== null && typeof a.hasOwnProperty('href') && typeof a.href !== 'undefined') {
             browser.tabs.create({
                 url: a.href
             });
@@ -46,28 +48,25 @@ function main() {
         browser.tabs.sendMessage(tabs[0].id, {"action": "parse"}).then(response => {
             updateView(response["results"]);
             randomQuote();
-        }).catch(onError);
+        });
     });
     randomQuote();
 
     // update/read theme settings
     var getting = browser.storage.local.get("theme");
     getting.then((item) => {
-        if (item.theme === "dark")
-            document.querySelector("link[href='styles/styleLight.css']").href = 'styles/styleDark.css';
-        else
-            document.querySelector("link[href='styles/styleDark.css']").href = 'styles/styleClear.css';
-    }, onError);
-}
-
-function onError(e) {
-    console.log("Error detected: " + e);
+        if (item !== null && item.hasOwnProperty('theme')) {
+            if (item.theme === "dark")
+                document.querySelector("link[href='styles/styleLight.css']").href = 'styles/styleDark.css';
+            else
+                document.querySelector("link[href='styles/styleDark.css']").href = 'styles/styleLight.css';
+        }
+    });
 }
 
 // Update HTML view and globals variables
 function updateView(data) {
     // [average, finalMark, totalMarks, totalCFU]
-    console.log(data);
     avg = data[0];
     finalMark = data[1];
     totalMarks = data[2];
@@ -95,7 +94,9 @@ function addNewExam() {
 }
 
 function displayNewExam(mark, cfu) {
-    var trashIcon = '<i class="fa fa-trash-o" aria-hidden="true"></i>';
+    var trashIcon = document.createElement('i');
+    trashIcon.setAttribute('class', 'fa fa-trash-o');
+    trashIcon.setAttribute('aria-hidden', 'true');
     var root = document.getElementsByClassName('historyMarks')[0];
 
     var div = document.createElement('div');
@@ -112,7 +113,7 @@ function displayNewExam(mark, cfu) {
     newCfu.disabled = true;
     newCfu.value = cfu;
     var del = document.createElement('button');
-    del.innerHTML = trashIcon;
+    del.appendChild(trashIcon);
     del.id = examID;
     del.onclick = function() { removeExam(del.id, newMark.value, newCfu.value); };
 
@@ -123,6 +124,7 @@ function displayNewExam(mark, cfu) {
     examID++;
 }
 
+// updates globals variables
 function submitNewExam(mark, cfu) {
     var mark = parseInt(mark);
     var cfu = parseInt(cfu);
@@ -149,13 +151,30 @@ function removeExam(id, mark, cfu) {
     div.parentNode.removeChild(div);
 }
 
+function generateA(before, after=null, aText=null, href=null, target=null) {
+    var p = document.createElement('p');
+    var a = document.createElement('a');
+
+    a.setAttribute('href', href);
+    a.setAttribute('target', target);
+    if (a != null)
+        a.textContent = aText;
+    p.appendChild(document.createTextNode(before));
+    p.appendChild(a);
+    if (after != null)
+        p.appendChild(document.createTextNode(after));
+    return p;
+}
+
 function randomQuote() {
     var avgResult = document.getElementById('avgResult');
     var finalMark = document.getElementById('markResult');
     var info = document.getElementsByClassName('info')[0];
+    info.textContent = '';
+
     if (avgResult.value === "" || finalMark.value === "")
-        info.innerHTML = wrongPage;
+        info.appendChild(generateA(...wrongPage));
     else {
-        info.innerHTML = quotes[Math.floor(Math.random()*quotes.length)];
+        info.appendChild(generateA(...(quotes[Math.floor(Math.random()*quotes.length)])));
     }
 }
