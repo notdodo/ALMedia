@@ -2,7 +2,7 @@
     "manifest_version": 2,
 
     "name": "ALMedia",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Calcola la tua media del libretto e la tua base di laurea direttamente dal portale di AlmaEsami.",
     "author": "Edoardo Rosa, Lisa Mazzini",
 
