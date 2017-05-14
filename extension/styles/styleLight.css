@@ -1,149 +1,32 @@
 body {
     background-color: #F2F2F2;
-    font-family: "Roboto Slab", sans-serif;
-    font-size: 0.9em;
-    overflow: hidden;
-}
-
-a {
-    color: #e74c3c;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-h4 {
-    background-color: #e74c3c;
-    color: #ecf0f1;
-    float: left;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 0;
-    margin-left: 50px;
-    padding: 11px 40px;
 }
 
 p {
     color: #424f5a;
-    margin: 0;
-    padding: 0;
 }
 
 input[type="number"] {
     background-color: #FFFFFF;
-    border: 0;
-    border-radius: 6px;
-    box-shadow: none;
     color: #424f5a;
-    display: block;
-    font-size: 1em;
-    font-weight: normal;
-    margin:  0;
-    padding: 4px;
-    text-align: center;
-}
-
-input[type="number"].clean {
-    -moz-appearance: textfield;
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type="number"].success {
-    border: 1px solid #2ecc71;
-    cursor: default;
-    padding: 3px;
-}
-
-header {
-    margin-left: -50px;
-    margin-top: 10px;
-    padding: 0;
 }
 
 .right-arrow {
-    background-color: #e74c3c;
     border-bottom: 21px solid #F2F2F2;
     border-left: 22px solid #e74c3c;
     border-top: 22px solid #F2F2F2;
-    float: left;
-}
-
-.main {
-    clear: both;
-    overflow: hidden;
-    padding: 10px 16px;
-}
-
-.main input {
-    width: 60px;
-}
-
-.main .results {
-    height: 60px;
-}
-
-.main .results div {
-    margin-left: 14px;
-}
-
-.main .results > div {
-    float: left;
-    margin-right: 20px;
-    text-align: center;
-}
-
-.main .futureMarks input, .main .historyMarks .examRow input {
-    float: left;
-    margin-right: 11px;
-    margin-top: 10px;
-    width: 70px;
-}
-
-.main .futureMarks button, .main .historyMarks .examRow button {
-    background-color: #1ABC9C;
-    border: 1px solid white;
-    border-radius: 6px;
-    box-shadow: none;
-    cursor: pointer;
-    margin-top: 10px;
-    text-align: center;
-    transition: background-color 0.4s ease-in-out;
-    vertical-align: middle;
-}
-
-.main .futureMarks button {
-    height: 28px;
 }
 
 .main .futureMarks button:hover, .main .historyMarks .examRow button:hover {
     background-color: #F2F2F2;
-    border: 1px solid #1ABC9C;
-    color: #1ABC9C;
-}
-
-.main .historyMarks .examRow:after {
-    clear: both;
-    content: '';
-    display: block;
 }
 
 .main .note {
     border: 1px solid #424f5a;
-    border-radius: 6px;
-    height: 80px;
-    margin-bottom: 5px;
-    margin-top: 15px;
-    width: 201px;
 }
 
 .main .note i {
     color: #424f5a;
-    margin-left: 5px;
-    margin-top: 5px;
-}
-
-.main .note .info {
-    padding: 2px;
 }
 
 @media

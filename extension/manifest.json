@@ -22,7 +22,7 @@
         }
     },
 
-    "content_security_policy": "script-src 'self' https://maxcdn.bootstrapcdn.com/* https://fonts.googleapis.com/*; object-src 'self'",
+    "content_security_policy": "script-src 'self'; object-src 'self'",
 
     "options_ui": {
         "page": "prefs/preferences.html"
