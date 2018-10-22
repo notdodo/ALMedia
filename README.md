@@ -13,6 +13,14 @@ Select Dark Theme or Clear theme from the extension preferences:
 ## Download 
 https://addons.mozilla.org/it/firefox/addon/almedia/
 
+## Build and run
+
+`PATH=${PATH}:$(pwd)/node_modules/web-ext/bin/`
+
+`web-ext run -s extension`
+
+`web-ext sign --api-key=XX --api-secret=XX`
+
 ### Information:
 Created with [web-ext](https://www.npmjs.com/package/web-ext).
 
