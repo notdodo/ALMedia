@@ -13,7 +13,7 @@
 
     "browser_action": {
         "browser_style": true,
-        "default_title": "View the Links in this Page",
+        "default_title": "ALMedia",
         "default_popup": "popup.html",
         "default_icon": {
             "16": "images/16.png",
