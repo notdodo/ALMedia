@@ -9,7 +9,7 @@ var examID =     0,
 
 // href to set
 var urlAlma = "https://almaesami.unibo.it/almaesami/studenti/attivitaFormativaPiano-list.htm"
-var urlGithub = "https://github.com/edoz90/ALMedia";
+var urlGithub = "https://github.com/notdodo/ALMedia";
 var urlAddon = "https://addons.mozilla.org/en-GB/firefox/addon/almedia/developers";
 
 // quotes: [before, after, a.text, a.her, a.target]
