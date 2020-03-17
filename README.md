@@ -26,7 +26,7 @@ https://addons.mozilla.org/it/firefox/addon/almedia/
 Created with [web-ext](https://www.npmjs.com/package/web-ext).
 
 Made by: 
-[edoz90](https://github.com/edoz90)
+[notdodo](https://github.com/notdodo)
 
 Little contribution of:
 [mlisa](https://github.com/mlisa)
