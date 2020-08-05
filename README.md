@@ -11,8 +11,11 @@ Select Dark Theme or Clear theme from the extension preferences:
 <img width="250" style="float: left;" src="https://addons.cdn.mozilla.net/user-media/previews/full/173/173985.png?modified=1462870353"/>
 <img width="250" style="float: right;" src="https://addons.cdn.mozilla.net/user-media/previews/full/173/173986.png?modified=1462870353"/>
 
-## Download 
-https://addons.mozilla.org/it/firefox/addon/almedia/
+## Download
+
+<https://github.com/notdodo/ALMedia/releases/download/3.0.5/almedia-3.0.5-an-fx.xpi>
+
+Deprecated: <https://addons.mozilla.org/it/firefox/addon/almedia/>
 
 ## Build and run
 
